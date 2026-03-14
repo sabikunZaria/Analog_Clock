@@ -1,0 +1,19 @@
+* {
+stroke : black;
+stroke-linecap : round; 
+fill : #ffe;
+stroke-width: 4px;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    height: 100vh;
+}
+#hour-hand, #minute-hand, #second-hand {
+    stroke-linecap: round;
+
+}
