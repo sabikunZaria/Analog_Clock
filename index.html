@@ -20,29 +20,7 @@
         <line id="second-hand" x1="100" y1="100" x2="100" y2="30" stroke="red" stroke-width="1"/> 
     </svg>
     <span id="digital-clock"></span>
-    <script>
-        function updateClock() {
-            const now = new Date();
-            const h = now.getHours(), m = now.getMinutes(), s = now.getSeconds();   
-            const h12 = h% 12 || 12;
-            const ampm = h<12 ? 'AM' : 'PM';
-
-
-
-            const secAngle = (s/60)*360;
-            const minAngle = (m/60)*360 + (s/60)*6;
-            const hourAngle = ((h%12)/12)*360 + (m/60)*30;
-
-            document.getElementById('second-hand').setAttribute('transform', `rotate(${secAngle} 100 100)`);
-            document.getElementById('minute-hand').setAttribute('transform', `rotate(${minAngle} 100 100)`);
-            document.getElementById('hour-hand').setAttribute('transform', `rotate(${hourAngle} 100 100)`); 
-            
-            const pad = n => n.toString().padStart(2, '0');
-            document.getElementById('digital-clock').textContent = `${pad(h12)}:${pad(m)}:${pad(s)} ${ampm}`;
-        }
-
-        setInterval(updateClock, 1000);
-        updateClock(); 
-    </script>
+    <script src="script.js" defer></script>    
+       
 </body>
 </html>
